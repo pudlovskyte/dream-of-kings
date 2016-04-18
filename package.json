@@ -1,0 +1,14 @@
+{
+  "name": "DreamOfKings",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "portent run .",
+    "build": "portent build .",
+    "deploy": "portent deploy build wf:webapps/dream_of_kings"
+  },
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "portent": "^3.1.0"
+  }
+}
