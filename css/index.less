@@ -112,11 +112,6 @@ h2 {
 		}
 	}
 
-	& > h1 {
-		margin-top: 2.5em;
-		text-transform: lowercase;
-	}
-
 	& > p {
 		font-style: italic;
 		line-height: 1.5;
@@ -126,12 +121,39 @@ h2 {
 	& > h2 {
 		margin: 1.4em;
 	}
+}
+
+.themes-page {
+	width: 100%;
+
+	padding: 7%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	background: black url('themes.jpg') no-repeat;
+	background-size: 100%;
+	color: hsl(22, 55%, 90%);
+	font-size: 1.3em;
+
+	& > h1 {
+		margin-top: 2.5em;
+		text-transform: lowercase;
+	}
 
 	& > .themes {
+		padding: 0;
 		margin-bottom: 3em;
 		font-family: 'Metamorphous', serif;
 		font-weight: normal;
+
+		li {
+			margin: 1.4em;
+		}
 	}
+
 }
 
 .dramatispersonae-page {
@@ -145,6 +167,7 @@ h2 {
 	align-items: center;
 
 	background-color: #0C202F;
+	background: linear-gradient(top, #0C202F, #0C202F, #0C1D2A);
 	color: hsl(22, 55%, 90%);
 	font-size: 1.3em;
 
@@ -185,7 +208,7 @@ h2 {
 
 .groups-page {
 	width: 100%;
-	height: 100vh;
+	//height: 100vh;
 
 	padding: 7%;
 	box-sizing: border-box;
@@ -194,10 +217,18 @@ h2 {
 	flex-direction: column;
 	align-items: flex-start;
 
-	background: black url('groups.jpg') no-repeat;
+	background: #01040C url('groups.jpg') no-repeat;
 	background-size: 100%;
 	color: #F9E3BF;
 	font-size: 1.3em;
+
+	h1 {
+		margin-top: 67vh;
+	}
+
+	p {
+		max-width: 40em;
+	}
 }
 
 .registration-page {
@@ -255,3 +286,117 @@ h2 {
 	}
 }
 
+.playareas-page {
+	width: 100%;
+	height: 100vh;
+
+	padding: 7%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	background: black url('playareas.jpg') no-repeat;
+	background-size: 100%;
+	color: #D9C8C6;
+	font-size: 1.3em;
+
+	h1 {
+		text-align: center;
+	}
+
+	p {
+		max-width: 20em;
+	}
+}
+
+.extra-page {
+	width: 100%;
+
+	padding: 7%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: white;
+	color: black;
+	font-size: 1.3em;
+
+	ol {
+		margin-top: 1.5em;
+		padding-left: 30px;
+		font-size: 1.1em;
+		font-style: italic;
+		list-style: none;
+
+		li {
+			margin: 7px 0;
+		}
+
+
+		li:before {
+		   content: '';
+		   display: inline-block;
+		   vertical-align: -6px;
+		   height: 1.2em;
+		   width: 1.2em;
+		   background-image: url('ankh.png');
+		   background-size: contain;
+		   background-repeat: no-repeat;
+		   padding-right: 0.3em;
+		}
+	}
+}
+
+.contacts-page {
+	width: 100%;
+	height: 110vh;
+
+	padding: 7%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	background: black url('contacts.jpg') no-repeat;
+	background-size: 100%;
+	color: #DCD4CF;
+	font-size: 1.3em;
+
+	ul {
+		padding: 0
+	}
+
+	// .wrapper {
+	// 	width: 100%;
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	align-items: flex-start;
+	// 	justify-content: space-around;
+	// }
+}
+
+.footer-page {
+	width: 100%;
+	height: 20vh;
+
+	padding: 7%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	background: #000305;
+	color: #DCD4CF;
+	font-size: 1.3em;
+	.credit {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.6em;
+		opacity: 0.5;
+	}
+}
