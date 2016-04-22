@@ -27,6 +27,12 @@ h3 {
 	font-weight: normal;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
 .menu {
 	height: 100vh;
 	width: 450px;
@@ -63,7 +69,7 @@ h3 {
 		color: #173B51;
 		color: #F8ECD9;
 		text-decoration: none;
-		//border-bottom: 1px solid darken(#F8ECD9, 5%);
+		border-bottom: none;
 
 		&:hover {
 			color: lighten(#F8ECD9, 10%);
@@ -394,14 +400,22 @@ button {
 }
 
 .footer-page {
-	height: 20vh;
 	align-items: flex-start;
+	padding: 5%;
 
 	background: #000305;
-	color: #DCD4CF;
+	color: hsl(0, 0%, 48%);
 	.credit {
 		font-family: 'Metamorphous', cursive;
 		font-size: 0.6em;
 		opacity: 0.5;
+	}
+
+	a {
+		border-bottom-color: darken(hsl(0, 0%, 48%), 20%);
+		&:hover {
+			color: lighten(hsl(0, 0%, 48%), 30%);
+			border-bottom-color: hsl(0, 0%, 48%);
+		}
 	}
 }
