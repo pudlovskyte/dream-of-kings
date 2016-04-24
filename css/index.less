@@ -237,6 +237,51 @@ button {
 		font-size: 1.1em;
 		color: #778495;
 	}
+
+	.footnote-link {
+		border-bottom: none;
+		cursor: default;
+		outline: none;
+
+		&.Assamite-link::after {content: '[1]';}
+		&.Gangrel-link::after {content: '[2]';}
+		&::after {
+			vertical-align: super;
+			font-size: 0.6em;
+			margin-left: 2px;
+			color: hsl(222, 100%, 73%);
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		&:focus::after {
+			outline: auto;
+			outline-offset: 2px;
+		}
+		&:hover::after {
+			color: darken(hsl(222, 100%, 73%), 20%);
+		}
+	}
+
+	footer {
+		max-width: 30em;
+		margin-top: 5em;
+		border-top: 1px solid;
+
+		ol {
+			list-style: decimal;
+			color: #778495;
+			font-size: 0.9em;
+			line-height: 1.4;
+		}
+
+		li {
+			padding: 0.2em;
+		}
+
+		& :target {
+			border: 1px solid hsl(222, 100%, 73%);
+		}
+	}
 }
 
 .rules-page {
