@@ -179,11 +179,60 @@ The Dream of Kings
 		<h1>Registration</h1>
 
 		<div>
-			<p>Send us an email (dreamofkings.vtm@gmail.com) with your priorities:</p>
-			<p>Would you prefer Camarilla or Sabbat? We'd like for Camarilla and Sabbat to be roughly equal in terms of player numbers, so please specify if you would agree to play both sides. We will allow only a small amount of independents.</p>
+		<form method='post'>
+			<fieldset>
+				<label>
+					<span>Name</span>
+					<input type='text' class='name'>
+				</label>
+				<label>
+					<span>E-mail</span>
+					<input type='email' class='email'>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Sect</legend>
+				<label>
+					<span>Which Sect whould you prefer?</span>
+					<select name='sect'>
+						<option value='Camarilla' selected>Camarilla</option>
+						<option value='Sabbat'>Sabbat</option>
+						<option value='Independent'>Independent</option>
+					</select>
+				</label>
+				<p>We'd like for Camarilla and Sabbat to be roughly equal in terms of player numbers, so please specify if you would agree to play both sides. We will allow only a small amount of Independents.</p>
+				<label>
+					<input type='checkbox' class='cbox1' value='any-side'>
+					<span>I would agree to play any side</span>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Group</legend>
+				<label>
+					<span>Do you have a group of players you're planning to be collaborating with?</span>
+					<select name='group'>
+						<option value='yes' selected>Yes</option>
+						<option value='no'>No</option>
+					</select>
+				</label>
+				<label>
+					<span>If not, do you need help finding the contacts of other players?</span>
+					<select name='group-help'>
+						<option value='yes'>Yes, please</option>
+						<option value='no' selected>No, I'll be fine</option>
+					</select>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Clan</legend>
+				<label>
+					<span>What clan or clans would you like to play?</span>
 
-			<p>Do you have a group of players you're planning to be collaborating with? If not, do you need help finding the contacts of other players?</p>
-			<p>What clan or clans would you like to play? We will try to give everyone their first choice.</p>
+					<p>We will try to give everyone their first choice.</p>
+
+			</fieldset>
+
+		</form>
 		</div>
 	</div>
 
