@@ -7,7 +7,7 @@ The Dream of Kings
 {% block content %}
 <div class=content-wrapper>
 
-	<button class=hamburger>≡</button>
+	<button class='hamburger -icon-button'>≡</button>
 	<ol class=menu>
 		<li class='-priority-1'><a href='#Intro'>Intro</a></li>
 		<li class='-priority-3'><a href='#Dramatis-Personae'>Dramatis Personæ</a></li>
@@ -27,7 +27,7 @@ The Dream of Kings
 				<div>A week-long city LARP</div>
 				<div>Vilnius • September 2016</div>
 			</div>
-			<a href='#Intro'><button class=arrow>▾</button></a>
+			<a href='#Intro'><button class='arrow -icon-button'>▾</button></a>
 	</div>
 
 	<div class='intro-page page' id='Intro'>
@@ -176,62 +176,50 @@ The Dream of Kings
 	</div>
 
 	<div class='registration-page page' id='Registration'>
+		<div class=wrapper>
 		<h1>Registration</h1>
-
 		<div>
+			<p>Want to join?<br>Fill in several fields below and we'll get back to you.</p>
+			<p class=autarkis-note>
+				Please choose Autarkis only if you <em>really</em> wanna play one as we'll allow just a small number of Independents.
+			</p>
+		</div>
+
 		<form method='post'>
-			<fieldset>
-				<label>
-					<span>Name</span>
-					<input type='text' class='name'>
-				</label>
-				<label>
-					<span>E-mail</span>
-					<input type='email' class='email'>
-				</label>
+			<fieldset class=sect>
+				I would like to join the game as a member of
+				<select name='sect'>
+					<option value='Camarilla' selected>Camarilla</option>
+					<option value='Sabbat'>Sabbat</option>
+					<option value='Independent'>Autarkis</option>
+				</select>,
+				<br>
+				preferably as
+				<input type='text' class='clan' placeholder='Gangrel or Malkavian'>.
 			</fieldset>
 			<fieldset>
-				<legend>Sect</legend>
-				<label>
-					<span>Which Sect whould you prefer?</span>
-					<select name='sect'>
-						<option value='Camarilla' selected>Camarilla</option>
-						<option value='Sabbat'>Sabbat</option>
-						<option value='Independent'>Independent</option>
-					</select>
-				</label>
-				<p>We'd like for Camarilla and Sabbat to be roughly equal in terms of player numbers, so please specify if you would agree to play both sides. We will allow only a small amount of Independents.</p>
-				<label>
-					<input type='checkbox' class='cbox1' value='any-side'>
-					<span>I would agree to play any side</span>
-				</label>
+				I
+				<select name='any-side'>
+					<option value='yes' selected>will agree</option>
+					<option value='no'>won't agree</option>
+				</select>
+				to play for the other side, if necessary.
 			</fieldset>
-			<fieldset>
-				<legend>Group</legend>
-				<label>
-					<span>Do you have a group of players you're planning to be collaborating with?</span>
-					<select name='group'>
-						<option value='yes' selected>Yes</option>
-						<option value='no'>No</option>
-					</select>
-				</label>
-				<label>
-					<span>If not, do you need help finding the contacts of other players?</span>
-					<select name='group-help'>
-						<option value='yes'>Yes, please</option>
-						<option value='no' selected>No, I'll be fine</option>
-					</select>
-				</label>
+			<fieldset class=group>
+				I
+				<select name='group'>
+					<option value='yes' selected>already have</option>
+					<option value='no'>don't have</option>
+				</select>
+				a group of players I'm planning to be collaborating with.
 			</fieldset>
-			<fieldset>
-				<legend>Clan</legend>
-				<label>
-					<span>What clan or clans would you like to play?</span>
-
-					<p>We will try to give everyone their first choice.</p>
-
+			<fieldset class=comments>
+				<textarea name="textarea" rows="1" placeholder='I have some additional comments.'></textarea>
 			</fieldset>
-
+			<fieldset class=contact>
+				My name is <input type='text' class='name'> and you can email me at <input type='email' class='email'>.
+			</fieldset>
+			<button type='submit'>Sign me up</button>
 		</form>
 		</div>
 	</div>
