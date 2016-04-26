@@ -460,63 +460,42 @@ a {
 
 .contacts-page {
 	min-height: 110vh;
-	align-items: flex-start;
-	justify-content: space-between;
-	padding: 9% 7% 12%;
+	justify-content: flex-end;
+
+	padding: 9% 7% 10%;
+
+	font-family: 'Metamorphous', cursive;
+	font-size: 1.2em;
 
 	background: black url('contacts.jpg') no-repeat;
 	background-size: 100%;
-	color: #DCD4CF;
+	color: darken(#DCD4CF, 30%);
+	line-height: 1.7;
 
-	.top-block {
-		align-self: center;
-		margin-top: -7vh;
-		font-family: 'Metamorphous', cursive;
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
-	h1 {
-		margin-bottom: 0.2em;
-	}
-
-	.bottom-block {
-		color: darken(#DCD4CF, 30%);
-	}
-
-	h2 {
-		display: inline-block;
-		&::after {
-			content: ':';
+	.block {
+		max-width: 40%;
+		&:first-child {
+			margin-right: 20%;
 		}
 	}
 
 	a:hover {
 		color: darken(#DCD4CF, 10%);
 	}
-
-	ul {
-		display: inline-block;
-		padding: 0;
-		margin-left: 0.4em;
-	}
-
-	li {
-		display: inline-block;
-		margin: 0 1px;
-		&::after {
-			content: ',';
-		}
-		&:last-child::after {
-			content: '';
-		}
-	}
 }
 
 .footer-page {
-	align-items: flex-start;
-	padding: 5%;
-
+	align-items: flex-end;
+	padding: 2% 5% 3%;
 	background: #000305;
-	color: hsl(0, 0%, 50%);
+	color: darken(#DCD4CF, 30%);
 	.credit {
 		font-family: 'Metamorphous', cursive;
 		font-size: 0.6em;
@@ -526,7 +505,7 @@ a {
 	a {
 		border-bottom-color: darken(hsl(0, 0%, 50%), 20%);
 		&:hover {
-			color: lighten(hsl(0, 0%, 50%), 30%);
+			color: #DCD4CF;
 			border-bottom-color: hsl(0, 0%, 50%);
 		}
 	}
