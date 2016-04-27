@@ -1,23 +1,27 @@
 .menu {
-	display: none !important;
+	display: flex;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 	height: 100vh;
 	width: 450px;
 	position: fixed;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(118, 136, 153, 0.88);
+
+	background-color: hsla(209, 15%, 53%, 0.88);
 	box-shadow: 2px 2px 12px 2px hsla(0, 0%, 0%, 0.12);
 	border-radius: 2px;
 	margin: 0;
-	box-sizing: border-box;
 	padding: 1.5em;
+	box-sizing: border-box;
+
 	font-size: 1.3em;
 	font-family: 'Metamorphous', cursive;
 	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
 
 	li {
 		margin: 0.7em 0;
@@ -32,13 +36,9 @@
 
 	a {
 		padding: 0.7em;
-		color: #173B51;
-		color: #F8ECD9;
-		text-decoration: none;
 		border-bottom: none;
-
+		color: hsl(37, 69%, 91%);
 		&:hover {
-			color: lighten(#F8ECD9, 10%);
 			color: hsl(30, 70%, 82%);
 		}
 	}
