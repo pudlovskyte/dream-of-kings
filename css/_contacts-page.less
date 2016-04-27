@@ -1,0 +1,33 @@
+.contacts-page {
+	min-height: 110vh;
+	justify-content: flex-end;
+	align-items: flex-start;
+
+	padding: 9% 7% 10%;
+
+	font-family: 'Metamorphous', cursive;
+	font-size: 1.2em;
+
+	background: black url('img/contacts.jpg') no-repeat;
+	background-size: 100%;
+	color: darken(#DCD4CF, 30%);
+	line-height: 1.7;
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.block {
+		max-width: 40%;
+		&:first-child {
+			margin-right: 10%;
+		}
+	}
+
+	a:hover {
+		color: darken(#DCD4CF, 10%);
+	}
+}

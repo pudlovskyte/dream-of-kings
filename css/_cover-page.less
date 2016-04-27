@@ -1,0 +1,52 @@
+.cover-page {
+	height: 110vh;
+
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	background: black url('img/cover.jpg') no-repeat;
+	background-size: 100%;
+	color: hsl(22, 55%, 90%);
+	font-size: 1em;
+
+	position: relative;
+
+	.title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 6.2em;
+		opacity: 0.4;
+		line-height: 1.15;
+		text-align: right;
+		position: absolute;
+		top: 7.3vw;
+		right: 35vw;
+	}
+
+	.subtitle {
+		font-family: 'Metamorphous', cursive;
+		font-size: 1.2em;
+		position: absolute;
+		top: 44vw;
+		right: 12vw;
+		line-height: 1.7;
+		opacity: 0.7;
+
+	}
+
+
+	.arrow {
+		font-family: 'texgyrepagella', serif;
+		font-size: 100px;
+		position: absolute;
+		top: 85vh;
+		left: 48%;
+		opacity: 0.3;
+
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+		}
+	}
+}
