@@ -1,0 +1,48 @@
+<div class='registration-page page' id='Registration'>
+	<div class=wrapper>
+	<h1>Registration</h1>
+	<div>
+		<p>Want to join?<br>Fill in several fields below and we'll get back to you.</p>
+		<p class=autarkis-note>
+			Please choose Autarkis only if you <em>really</em> wanna play one as we'll allow just a small number of Independents.
+		</p>
+	</div>
+
+	<form method='post'>
+		<fieldset class=sect>
+			I would like to join the game as a member of
+			<select name='sect'>
+				<option value='Camarilla' selected>Camarilla</option>
+				<option value='Sabbat'>Sabbat</option>
+				<option value='Independent'>Autarkis</option>
+			</select>,
+			<br>
+			preferably as
+			<input type='text' class='clan' placeholder='Gangrel or Malkavian'>.
+		</fieldset>
+		<fieldset>
+			I
+			<select name='any-side'>
+				<option value='yes' selected>will agree</option>
+				<option value='no'>won't agree</option>
+			</select>
+			to play for the other side, if necessary.
+		</fieldset>
+		<fieldset class=group>
+			I
+			<select name='group'>
+				<option value='yes' selected>already have</option>
+				<option value='no'>don't have</option>
+			</select>
+			a group of players I'm planning to be collaborating with.
+		</fieldset>
+		<fieldset class=comments>
+			<textarea name="textarea" rows="1" placeholder='I have some additional comments.'></textarea>
+		</fieldset>
+		<fieldset class=contact>
+			My name is <input type='text' class='name'> and you can email me at <input type='email' class='email'>.
+		</fieldset>
+		<button type='submit'>Sign me up</button>
+	</form>
+	</div>
+</div>
