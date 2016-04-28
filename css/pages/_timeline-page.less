@@ -1,19 +1,18 @@
 .timeline-page {
+	@dateWidth: 20rem;
 	padding-left: 15rem;
 
-	background-color: rgba(251, 237, 207, 0.8);
-	color: #092030;
+	background-color: hsla(41, 85%, 90%, 0.8);
+	color: hsl(205, 68%, 11%);
 
 	h1, section {
 		margin-bottom: 80px;
 	}
 
+	@h2fontSize: 1.9rem; // to align date with h2
 	h2 {
-		font-size: 1.9rem;
-		line-height: 1.9rem;
-		margin: 0;
-		//text-align: center;
-		//margin-top: 1.3em;
+		font-size: @h2fontSize;
+		line-height: @h2fontSize;
 	}
 
 	h3 {
@@ -23,26 +22,18 @@
 
 	.meta {
 		display: flex;
-		margin-left: -20rem;
+		margin-left: -@dateWidth;
 	}
 
 	.date {
-		line-height: 1.9rem;
-		font-size: 1.5rem;
-		width: 20rem;
+		width: @dateWidth;
 		order: -1;
+		line-height: @h2fontSize; // to align date with h2
+		font-size: 1.5rem;
 		font-family: 'Metamorphous', cursive;
-		//font-size: 1.4em;
-		//font-style: italic;
 		color:	 hsl(216, 14%, 61%);
 		text-align: right;
 		padding-right: 2.5rem;
 		box-sizing: border-box;
-	}
-
-	.moreinfo {
-		margin-top: 6em;
-		font-style: italic;
-		font-size: 1.1em;
 	}
 }
