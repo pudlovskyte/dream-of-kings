@@ -1,3 +1,5 @@
+@import '_constants.less';
+
 .icon-link {
 	font-family: 'texgyrepagella', serif;
 	border: none;
@@ -10,9 +12,11 @@
 }
 
 .hamburger {
-	font-size: 85px;
+	// to align hamburger with the bottom of subtitle
+	font-size: @subtitleFontSize;
+	line-height: @subtitleLineHeight;
 	position: fixed;
-	bottom: 6vh;
+	bottom: @subtitleBottom;
 	right: 5vw;
 	opacity: 0.7;
 	z-index: 1;
@@ -20,5 +24,10 @@
 	&:hover,
 	&:focus {
 		opacity: 1;
+	}
+
+	.hamburgerCharacter {
+		font-size: 85px;
+		vertical-align: -10px; // to align hamburgerCharacter on baseline
 	}
 }

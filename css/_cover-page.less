@@ -1,46 +1,44 @@
-.cover-page {
-	height: 110vh;
+@import '_constants.less';
 
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+.cover-page {
+	@extraBottomPadding: 10vh;
+	height: 100vh + @extraBottomPadding;
+
+	display: block;
+	position: relative;
 
 	background: black url('img/cover.jpg') no-repeat;
 	background-size: 100%;
 	color: hsl(22, 55%, 90%);
 	font-size: 1em;
 
-	position: relative;
-
 	.title {
-		margin-top: 0;
-		margin-bottom: 0;
-		font-size: 6.2em;
-		opacity: 0.4;
-		line-height: 1.15;
-		text-align: right;
 		position: absolute;
 		top: 7.3vw;
 		right: 35vw;
+		margin: 0;
+		font-size: 6.2em;
+		line-height: 1.15;
+		text-align: right;
+		opacity: 0.4;
 	}
 
 	.subtitle {
-		font-family: 'Metamorphous', cursive;
-		font-size: 1.2em;
 		position: absolute;
-		top: 44vw;
-		right: 12vw;
-		line-height: 1.7;
+		bottom: @subtitleBottom + @extraBottomPadding;
+		right: 12.5vw;
+
+		font-family: 'Metamorphous', cursive;
+		font-size: @subtitleFontSize;
+		line-height: @subtitleLineHeight;
 		opacity: 0.7;
-
 	}
-
 
 	.arrow {
 		font-size: 100px;
 		position: absolute;
-		top: 85vh;
-		left: 48%;
+		bottom: ~'calc('@extraBottomPadding~'- 18px)';
+		left: 48vw;
 		opacity: 0.5;
 
 		&:hover,
