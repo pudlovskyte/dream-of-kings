@@ -1,39 +1,37 @@
 .intro-page {
 	height: 205vh;
+	padding-bottom: 9vh; //to align blockquate to the bottom of the picture
 
 	background: black url('img/themes.jpg') no-repeat;
 	background-position: bottom;
 	background-size: 100%;
 	color: hsl(22, 55%, 90%);
 
-	div {
+	.flavorText {
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-	}
-
-	blockquote {
-		font-family: 'Metamorphous', cursive;
-		font-size: 0.9em;
-		align-self: flex-start;
-		color: #9F9F9F;
-		line-height: 1.7;
-		margin: 0;
-
-		span {
-			color: #6A717B;
+		h2 {
+			margin: 1.4em;
+		}
+		p {
+			margin: 0;
+			font-style: italic;
+			line-height: 1.5;
 		}
 	}
 
-	p {
-		font-style: italic;
-		line-height: 1.5;
+	.flavorQuotes {
+		align-self: flex-start;
 		margin: 0;
-	}
-
-	h2 {
-		margin: 1.4em;
+		line-height: 1.7;
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.9em;
+		color: hsl(0, 0%, 62%);
+		span {
+			color: hsl(215, 7%, 45%);
+		}
 	}
 }
