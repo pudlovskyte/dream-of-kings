@@ -1,26 +1,20 @@
 .contacts-page {
+	@contactsColor: hsl(23, 15%, 54%);
 	min-height: 110vh;
-	justify-content: flex-end;
 	align-items: flex-start;
-
-	padding: 9% 7% 10%;
-
-	font-family: 'Metamorphous', cursive;
-	font-size: 1.2em;
-
 	background: black url('img/contacts.jpg') no-repeat;
 	background-size: 100%;
-	color: darken(#DCD4CF, 30%);
+	color: @contactsColor;
+	font-family: 'Metamorphous', cursive;
+	font-size: 1.2em;
 	line-height: 1.7;
 
 	.wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		flex-wrap: wrap;
+		margin-top: 39vw;
 	}
 
-	.block {
+	.textBlock {
+		display: inline-block;
 		max-width: 40%;
 		&:first-child {
 			margin-right: 10%;
@@ -28,6 +22,6 @@
 	}
 
 	a:hover {
-		color: darken(#DCD4CF, 10%);
+		color: lighten(@contactsColor, 20%);
 	}
 }
