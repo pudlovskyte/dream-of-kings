@@ -1,18 +1,22 @@
+@import '../_constants.less';
+
 .footer-page {
 	align-items: flex-end;
-	padding: 2% 5% 3%;
-	background: #000305;
-	color: darken(#DCD4CF, 30%);
+	padding: 5vh @hamburgerRight;
+	background: hsl(204, 100%, 1%);
+	color: hsl(23, 15%, 54%);
+
 	.credit {
 		font-family: 'Metamorphous', cursive;
 		font-size: 0.6em;
 		opacity: 0.5;
+		margin-right: 6px; //to align with hamburger
 	}
 
 	a {
 		border-bottom-color: darken(hsl(0, 0%, 50%), 20%);
 		&:hover {
-			color: #DCD4CF;
+			color: hsl(23, 16%, 84%);
 			border-bottom-color: hsl(0, 0%, 50%);
 		}
 	}
