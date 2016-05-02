@@ -1,9 +1,12 @@
 .registration-page {
-	@registrationBackgroundColor: hsl(209, 12%, 48%);
-	@registrationColor: hsl(30, 83%, 93%);
+	@backgroundColor: hsl(209, 12%, 48%);
+	@color: hsl(30, 83%, 93%);
+	@inputColor: hsl(30, 97%, 83%);
+	@hoverColor: hsl(30, 100%, 72%);
+	@bottomBorderColor: hsl(30, 0%, 82%);
 
-	background-color: @registrationBackgroundColor;
-	color: @registrationColor;
+	background-color: @backgroundColor;
+	color: @color;
 	min-height: 105vh;
 
 	.wrapper {
@@ -22,8 +25,8 @@
 	}
 
 	form {
-		background-color: @registrationBackgroundColor;
-		color: @registrationColor;
+		background-color: @backgroundColor;
+		color: @color;
 		padding: 2em 3em 0;
 		margin: 2em -3em 0;
 		border-top: 1px solid;
@@ -40,15 +43,15 @@
 	input, select, textarea {
 		background: transparent;
 		border: none;
-		border-bottom: 1px dashed hsl(30, 0%, 82%);
-		color: hsl(30, 97%, 83%);
+		border-bottom: 1px dashed @bottomBorderColor;
+		color: @inputColor;
 		font-family: 'texgyrepagella', serif;
 		font-size: 1em;
 		font-style: italic;
 		text-align-last: center; // a hack to center select and input text
 		&:hover,
 		&:focus {
-			color: darken(hsl(30, 100%, 82%), 10%);
+			color: @hoverColor;
 		}
 		&::placeholder  {
 			color: hsl(230, 6%, 62%);
@@ -68,8 +71,8 @@
 
 	button {
 		display: block;
-		background: @registrationColor;
-		color: @registrationBackgroundColor;
+		background: @color;
+		color: @backgroundColor;
 		border: none;
 		border-radius: 4px;
 		margin: 2em auto 0;
@@ -77,11 +80,11 @@
 		font-size: 1.3em;
 		font-family: 'Metamorphous', cursive;
 		&:hover {
-			background: darken(@registrationColor, 5%);
+			background: darken(@color, 5%);
 			box-shadow: 0px 2px 12px 2px hsla(0, 0%, 0%, 0.12);
 		}
 		&:active {
-			background: darken(@registrationColor, 10%);
+			background: darken(@color, 10%);
 		}
 	}
 }
