@@ -26,7 +26,8 @@
 
 	a {
 		border-bottom-color: @bottomBorderColor;
-		&:hover {
+		&:hover,
+		&:focus {
 			color: @hoverColor;
 			border-bottom-color: @hoverColor;
 		}
@@ -87,8 +88,9 @@
 		padding: 0.7em;
 		font-size: 1.3em;
 		font-family: 'Metamorphous', cursive;
-		&:hover {
-			background: darken(@color, 5%);
+		&:hover,
+		&:focus {
+			background: darken(@color, 7%);
 			box-shadow: 0px 2px 12px 2px hsla(0, 0%, 0%, 0.12);
 		}
 		&:active {
