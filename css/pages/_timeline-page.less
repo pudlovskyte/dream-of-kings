@@ -1,6 +1,8 @@
 .timeline-page {
 	@dateWidth: 20rem;
-	padding-left: 15rem;
+	@media (min-width: 1101px) {
+		padding-left: 15rem;
+	}
 
 	background-color: hsla(41, 85%, 90%, 0.8);
 	color: hsl(205, 68%, 11%);
@@ -35,5 +37,18 @@
 		text-align: right;
 		padding-right: 2.5rem;
 		box-sizing: border-box;
+	}
+
+	@media (max-width: 1100px) {
+		.meta {
+			flex-direction: column;
+			margin-left: 0;
+		}
+
+		.date {
+			width: auto;
+			text-align: left;
+			margin-bottom: 10px;
+		}
 	}
 }
