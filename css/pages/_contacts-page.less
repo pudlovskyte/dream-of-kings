@@ -9,6 +9,8 @@
 	font-size: 1.2em;
 	line-height: 1.7;
 
+
+
 	.wrapper {
 		margin-top: 39vw;
 	}
@@ -20,6 +22,16 @@
 		&:first-child {
 			margin-right: 10%;
 		}
+
+		@media (max-width: 1100px) {
+			display: block;
+			max-width: 100%;
+			margin: 0 0 1em;
+		}
+	}
+
+	.no-wrap {
+		white-space: nowrap;
 	}
 
 	a:hover,
