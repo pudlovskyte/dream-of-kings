@@ -6,6 +6,7 @@
 	padding-bottom: 9vh;
 	background: black url('img/contacts.jpg') no-repeat;
 	background-size: 100%;
+
 	@media (orientation: portrait) {
 		background-size: cover;
 		background-position: 37%;
@@ -15,6 +16,11 @@
 	font-size: 1.2em;
 	line-height: 1.7;
 
+	@media (max-width: 500px) {
+		background-image: none;
+		min-height: auto;
+	}
+
 	.wrapper {
 		margin-top: 39vw;
 		@media (orientation: portrait) {
@@ -22,6 +28,9 @@
 		}
 		@media (min-width: 2000px) {
 			margin: 5vw 0 0 65vw;
+		}
+		@media (max-width: 500px) {
+			margin-top: 0;
 		}
 	}
 

@@ -4,8 +4,15 @@
 	background-size: 100%;
 	color: hsl(37, 83%, 86%);
 
+	@media (max-width: 500px) {
+		background-image: none;
+	}
+
 	.wrapper {
 		margin-top: 36vw;
+		@media (max-width: 500px) {
+			margin-top: 0;
+		}
 	}
 
 	p {
