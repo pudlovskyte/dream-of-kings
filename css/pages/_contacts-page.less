@@ -1,12 +1,14 @@
 .contacts-page {
 	@contactsColor: hsl(23, 15%, 54%);
 
-	@media (orientation: landscape) {
-		min-height: 110vh;
-	}
+	min-height: 110vh;
 	align-items: flex-start;
 	background: black url('img/contacts.jpg') no-repeat;
 	background-size: 100%;
+	@media (orientation: portrait) {
+		background-size: cover;
+		background-position: 37%;
+	}
 	color: @contactsColor;
 	font-family: 'Metamorphous', cursive;
 	font-size: 1.2em;
@@ -14,6 +16,9 @@
 
 	.wrapper {
 		margin-top: 39vw;
+		@media (orientation: portrait) {
+			margin-top: 60vh;
+		}
 		@media (min-width: 2000px) {
 			margin: 5vw 0 0 65vw;
 		}
