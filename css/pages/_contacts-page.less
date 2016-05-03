@@ -1,7 +1,9 @@
 .contacts-page {
 	@contactsColor: hsl(23, 15%, 54%);
 
-	min-height: 110vh;
+	@media (orientation: landscape) {
+		min-height: 110vh;
+	}
 	align-items: flex-start;
 	background: black url('img/contacts.jpg') no-repeat;
 	background-size: 100%;
