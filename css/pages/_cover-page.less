@@ -3,12 +3,16 @@
 .cover-page {
 	@extraBottomPadding: 10vh;
 	height: 100vh + @extraBottomPadding;
-
 	display: block;
 	position: relative;
 
 	background: black url('img/cover.jpg') no-repeat;
 	background-size: 100%;
+
+	@media (orientation: portrait) {
+		background-size: cover;
+		background-position: 75%;
+	}
 	color: hsl(22, 55%, 90%);
 	font-size: 1em;
 
@@ -22,6 +26,10 @@
 		text-align: right;
 		opacity: 0.4;
 
+		@media (orientation: portrait) {
+			top: 13vh;
+			right: 40vw;
+		}
 		@media (max-width: 1100px) {
 			font-size: 4em;
 		}
