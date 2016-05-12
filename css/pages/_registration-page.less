@@ -37,7 +37,6 @@
 		@media (max-width: 800px) {
 			padding: 46px 0 0;
 			margin: 46px 0 0;
-
 		}
 	}
 
@@ -56,6 +55,10 @@
 		font-size: 1em;
 		font-style: italic;
 		text-align-last: center; // a hack to center select and input text
+		@media (max-width: 400px) {
+			text-align-last: left;
+		}
+
 		&:hover,
 		&:focus {
 			color: @hoverColor;
@@ -74,6 +77,15 @@
 		text-align-last: left;
 		padding: 2px 5px;
 		box-sizing: border-box;
+		@media (max-width: 500px) {
+			height: 4.4em;
+		}
+	}
+
+	input.-contact {
+		@media (max-width: 500px) {
+			margin-bottom: 0.3em;
+		}
 	}
 
 	button {
