@@ -1,9 +1,12 @@
+@import '../_mixins.less';
+
 .playareas-page {
 	@media (orientation: landscape) {
 		min-height: 105vh;
 	}
 	align-items: flex-start;
 	background: black url('img/playareas.jpg') no-repeat;
+	.smallHeightBackground(url('img/playareas-small.jpg'));
 	background-size: cover;
 	color: hsl(32, 39%, 81%);
 

@@ -1,4 +1,5 @@
 @import '../_constants.less';
+@import '../_mixins.less';
 
 .cover-page {
 	display: block;
@@ -12,6 +13,7 @@
 	}
 
 	background: black url('img/cover.jpg') no-repeat;
+	.smallHeightBackground(url('img/cover-small.jpg'));
 	background-size: 100%;
 	@media (orientation: portrait) {
 		background-size: cover;
