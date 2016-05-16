@@ -31,7 +31,10 @@ if (menu){
 		menu.style.display = 'none';
 	};
 
-	document.querySelector('[href="#menu"]').addEventListener('click', showMenu);
+	document.querySelector('[href="#menu"]').addEventListener('click', function(e){
+		e.preventDefault();
+		showMenu();
+	});
 	document.body.addEventListener('click', function(e){
 		if (isElementInsideMenu(e.target) || isLinkToMenu(e.target))
 			return;
