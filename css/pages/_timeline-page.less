@@ -2,6 +2,11 @@
 	@dateWidth: 20rem;
 	@media (min-width: 1101px) {
 		padding-left: 15rem;
+		// Timeline has a special layout on wide screens.
+		// Even for centered headings.
+		h1.-center {
+			text-align: left;
+		}
 	}
 
 	background-color: hsl(40, 77%, 92%);
