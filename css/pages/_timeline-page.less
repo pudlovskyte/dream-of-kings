@@ -1,11 +1,10 @@
 .timeline-page {
-	@dateWidth: 20rem;
-	@media (min-width: 1101px) {
-		padding-left: 15rem;
-	}
-
 	background-color: hsl(40, 77%, 92%);
 	color: hsl(205, 68%, 11%);
+
+	section {
+		display: flex;
+	}
 
 	h1, section {
 		margin-bottom: 80px;
@@ -22,37 +21,66 @@
 	}
 
 	.subheading {
-		margin: 3px 0;
 		font-size: 1em;
+		margin: 3px 0;
 	}
 
-	.meta {
-		display: flex;
-		margin-left: -@dateWidth;
-	}
-
+	@dateWidth: 20rem;
 	.date {
 		width: @dateWidth;
-		order: -1;
+		padding-right: 2.5rem;
+		box-sizing: border-box;
+		text-align: right;
 		line-height: @h2fontSize; // to align date with h2
 		font-size: 1.5rem;
 		font-family: 'Metamorphous', cursive;
 		color:	 hsl(216, 14%, 61%);
-		text-align: right;
-		padding-right: 2.5rem;
-		box-sizing: border-box;
+
+		.en-dash {
+			vertical-align: -2px;
+		}
+	}
+
+	.calendar {
+		margin-top: 0.5em;
+		padding-left: 4.9rem;
+	}
+
+	@markedPeriodBackground: hsl(205, 11%, 74%);
+	@markedPeriodColor: hsl(65, 67%, 95%);
+	.calendar.prologue .prologue-period {
+		background: @markedPeriodBackground;
+		color: @markedPeriodColor;
+	}
+	.calendar.main-game .main-game-period {
+		background: @markedPeriodBackground;
+		color: @markedPeriodColor;
+	}
+
+	@media (min-width: 1101px) {
+		.wrapper {
+			margin-left: -10rem; // to visually center the content
+		}
+
+		h1 {
+			text-align: left;
+			margin-left: @dateWidth; // to align h1 with paragraphs
+		}
 	}
 
 	@media (max-width: 1100px) {
-		.meta {
-			flex-direction: column;
-			margin-left: 0;
+		section {
+			display: block;
 		}
 
 		.date {
 			width: auto;
 			text-align: left;
 			margin-bottom: 10px;
+		}
+
+		.calendar {
+			display: none;
 		}
 	}
 }
